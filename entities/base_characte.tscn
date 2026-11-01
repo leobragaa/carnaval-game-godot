@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://67o5g8noqiuv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wtrx"]
+
+[node name="BaseCharacter" type="CharacterBody2D" unique_id=1135647854]
+texture_filter = 1
+
+[node name="Textura" type="Sprite2D" parent="." unique_id=1762536999]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802761788]
+shape = SubResource("RectangleShape2D_7wtrx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1534210858]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://citcqe477jrqu"]
+
+[ext_resource type="Texture2D" uid="uid://dk4a2wdcc4g6w" path="res://sprites/Carnaval/idles/idle.png" id="1_merdl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_merdl"]
+radius = 8.0
+height = 38.0
+
+[sub_resource type="Animation" id="Animation_e4p34"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_b0kkn"]
+resource_name = "idle"
+step = 0.1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4p34"]
+_data = {
+&"RESET": SubResource("Animation_e4p34"),
+&"idle": SubResource("Animation_b0kkn")
+}
+
+[node name="player" unique_id=1135647854]
+
+[node name="Textura" parent="." index="0" unique_id=1762536999]
+texture_filter = 1
+position = Vector2(5, -40)
+texture = ExtResource("1_merdl")
+hframes = 4
+vframes = 4
+frame = 2
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1802761788]
+show_behind_parent = true
+position = Vector2(0, -5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_merdl")
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=1534210858]
+libraries/ = SubResource("AnimationLibrary_e4p34")
