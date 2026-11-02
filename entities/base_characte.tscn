@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://67o5g8noqiuv"]
 
+[ext_resource type="Script" uid="uid://bdv4yagafar2s" path="res://scripts/base_characte.gd" id="1_e1di5"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wtrx"]
 
 [node name="BaseCharacter" type="CharacterBody2D" unique_id=1135647854]
 texture_filter = 1
+script = ExtResource("1_e1di5")
 
 [node name="Textura" type="Sprite2D" parent="." unique_id=1762536999]
 

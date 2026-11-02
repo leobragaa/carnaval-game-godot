@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cj516cp1qe8wm"]
+
+[ext_resource type="PackedScene" uid="uid://bud5t8gpthpba" path="res://scenes/tarreno.tscn" id="1_6jnn5"]
+[ext_resource type="PackedScene" uid="uid://citcqe477jrqu" path="res://entities/player.tscn" id="2_13nf1"]
+
+[node name="GameProcess" type="Node2D" unique_id=1847351954]
+
+[node name="Tarreno" parent="." unique_id=86263665 instance=ExtResource("1_6jnn5")]
+
+[node name="Player" parent="Tarreno" unique_id=1135647854 instance=ExtResource("2_13nf1")]

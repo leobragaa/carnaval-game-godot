@@ -1,39 +1,63 @@
 [gd_scene format=3 uid="uid://citcqe477jrqu"]
 
-[ext_resource type="Texture2D" uid="uid://dk4a2wdcc4g6w" path="res://sprites/Carnaval/idles/idle.png" id="1_merdl"]
+[ext_resource type="Texture2D" uid="uid://bkpdsuv1tis4" path="res://sprites/Carnaval/idles/spritesheet_carnaval_espacamento_corrigido.png" id="1_b0kkn"]
+[ext_resource type="PackedScene" uid="uid://67o5g8noqiuv" path="res://entities/base_characte.tscn" id="1_e4p34"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_merdl"]
-radius = 8.0
-height = 38.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgk0v"]
+radius = 9.0
+height = 32.0
 
-[sub_resource type="Animation" id="Animation_e4p34"]
+[sub_resource type="Animation" id="Animation_rfe5m"]
 length = 0.001
-
-[sub_resource type="Animation" id="Animation_b0kkn"]
-resource_name = "idle"
-step = 0.1
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4p34"]
-_data = {
-&"RESET": SubResource("Animation_e4p34"),
-&"idle": SubResource("Animation_b0kkn")
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textura:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
-[node name="player" unique_id=1135647854]
+[sub_resource type="Animation" id="Animation_qly61"]
+resource_name = "idle"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Textura:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04136474, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsoyl"]
+_data = {
+&"RESET": SubResource("Animation_rfe5m"),
+&"idle": SubResource("Animation_qly61")
+}
+
+[node name="Player" unique_id=1135647854 instance=ExtResource("1_e4p34")]
 
 [node name="Textura" parent="." index="0" unique_id=1762536999]
 texture_filter = 1
-position = Vector2(5, -40)
-texture = ExtResource("1_merdl")
+position = Vector2(3, -40)
+texture = ExtResource("1_b0kkn")
 hframes = 4
 vframes = 4
-frame = 2
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1802761788]
 show_behind_parent = true
-position = Vector2(0, -5)
+position = Vector2(-1, -3)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_merdl")
+shape = SubResource("CapsuleShape2D_vgk0v")
 
 [node name="AnimationPlayer" parent="." index="2" unique_id=1534210858]
-libraries/ = SubResource("AnimationLibrary_e4p34")
+libraries/ = SubResource("AnimationLibrary_qsoyl")
