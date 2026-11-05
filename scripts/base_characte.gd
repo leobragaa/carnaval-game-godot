@@ -9,6 +9,7 @@ class_name BaseCharacter
 @export var _sprite2D:  Sprite2D
 @export var _animation: AnimationPlayer
 
+var _idle_direction: String = "idle_front"
 var _direction: Vector2 = Vector2.ZERO
 
 func _process(_delta: float) -> void:
@@ -26,24 +27,30 @@ func _move() -> void:
 func _animate() -> void:
 	
 	if _direction == Vector2.ZERO:
-		_animation.play("idle_front")
+		_animation.play(_idle_direction)
 		return
 		
 	if abs(_direction.x) > abs(_direction.y):
 		
 		if _direction.x > 0:
+			_idle_direction = "idle_right"
 			_sprite2D.flip_h = false
-			_animation.play("run_lado")
+			_animation.play("run_right")
+			
 			
 		elif _direction.x < 0:
-			_sprite2D.flip_h = 	 true	
-			_animation.play("run_lado")
+			_idle_direction = "idle_left"
+			_sprite2D.flip_h = 	 false	
+			_animation.play("run_left")
+			
 			
 	else:
 		if _direction.y > 0:
 			_animation.play("run_front")
+			_idle_direction = "idle_front"
 		else:
 			_animation.play("run_up")
+			_idle_direction = "idle_up"
 			
 
 
