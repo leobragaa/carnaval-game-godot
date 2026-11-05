@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk4a2wdcc4g6w"
-path="res://.godot/imported/idle.png-a6a42e01418c1effa52e5d55b2add356.ctex"
+uid="uid://qgm0y5th1h5b"
+path="res://.godot/imported/mage_blue.png-bca8d1270af5c1ef80cdd98b64246bbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Carnaval/idles/idle.png"
-dest_files=["res://.godot/imported/idle.png-a6a42e01418c1effa52e5d55b2add356.ctex"]
+source_file="res://sprites/mage_blue.png"
+dest_files=["res://.godot/imported/mage_blue.png-bca8d1270af5c1ef80cdd98b64246bbd.ctex"]
 
 [params]
 

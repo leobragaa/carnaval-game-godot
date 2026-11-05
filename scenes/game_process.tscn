@@ -7,4 +7,5 @@
 
 [node name="Tarreno" parent="." unique_id=86263665 instance=ExtResource("1_6jnn5")]
 
-[node name="Player" parent="Tarreno" unique_id=1135647854 instance=ExtResource("2_13nf1")]
+[node name="Player" parent="." unique_id=1135647854 instance=ExtResource("2_13nf1")]
+_move_speed = 128.0

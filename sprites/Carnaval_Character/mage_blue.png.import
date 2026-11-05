@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr6vh8liplehb"
-path="res://.godot/imported/Sprite de Corrida Carnavalesca em Pixel Art.png-a38e4446f36af4dd54a57d7ba0b087f4.ctex"
+uid="uid://oft4yrsmbgm3"
+path="res://.godot/imported/mage_blue.png-a3f889362b2dc7646fcdd69dc36e2f8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Carnaval/movimento/Sprite de Corrida Carnavalesca em Pixel Art.png"
-dest_files=["res://.godot/imported/Sprite de Corrida Carnavalesca em Pixel Art.png-a38e4446f36af4dd54a57d7ba0b087f4.ctex"]
+source_file="res://sprites/Carnaval_Character/mage_blue.png"
+dest_files=["res://.godot/imported/mage_blue.png-a3f889362b2dc7646fcdd69dc36e2f8a.ctex"]
 
 [params]
 

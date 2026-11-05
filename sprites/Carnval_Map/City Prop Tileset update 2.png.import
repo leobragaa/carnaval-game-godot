@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkpdsuv1tis4"
-path="res://.godot/imported/spritesheet_carnaval_espacamento_corrigido.png-abe63c4025431dc13add4710ee0eb312.ctex"
+uid="uid://bgah370mcw12u"
+path="res://.godot/imported/City Prop Tileset update 2.png-26c664e060f8d56bf20f37f80f10f609.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Carnaval/idles/spritesheet_carnaval_espacamento_corrigido.png"
-dest_files=["res://.godot/imported/spritesheet_carnaval_espacamento_corrigido.png-abe63c4025431dc13add4710ee0eb312.ctex"]
+source_file="res://sprites/Carnval_Map/City Prop Tileset update 2.png"
+dest_files=["res://.godot/imported/City Prop Tileset update 2.png-26c664e060f8d56bf20f37f80f10f609.ctex"]
 
 [params]
 
