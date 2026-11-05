@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://0asu7pq5t28w"]
+
+[ext_resource type="Script" uid="uid://d2alb1urdc7sm" path="res://scripts/timer_count.gd" id="1_457g4"]
+
+[node name="TimerCount" type="Node" unique_id=600845156]
+script = ExtResource("1_457g4")
+
+[node name="Label" type="Label" parent="." unique_id=1902144166]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_font_sizes/font_size = 50
+
+[node name="Timer" type="Timer" parent="." unique_id=348213845]
+wait_time = 120.0
+one_shot = true

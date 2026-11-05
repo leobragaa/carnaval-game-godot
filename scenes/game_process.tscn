@@ -8,6 +8,7 @@
 
 [node name="Tarreno" parent="." unique_id=86263665 instance=ExtResource("1_6jnn5")]
 
-[node name="Camera2D" parent="." unique_id=900677962 instance=ExtResource("3_13nf1")]
-
 [node name="Player" parent="." unique_id=1135647854 groups=["BaseCharacter"] instance=ExtResource("2_13nf1")]
+
+[node name="Camera2D" parent="." unique_id=900677962 instance=ExtResource("3_13nf1")]
+limit_bottom = 10000000
