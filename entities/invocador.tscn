@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctbvcrdfelfw3"]
+
+[ext_resource type="Script" uid="uid://cb45eig2qn2lo" path="res://scripts/invocador.gd" id="1_r4wg5"]
+
+[node name="Invocador" type="Node2D" unique_id=247537901]
+script = ExtResource("1_r4wg5")
+
+[node name="Timer" type="Timer" parent="." unique_id=1636977624]
