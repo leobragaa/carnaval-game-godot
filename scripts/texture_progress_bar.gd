@@ -2,7 +2,6 @@ extends TextureProgressBar
 
 @export var player: BaseCharacter
 
-
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player") as BaseCharacter
 	player.health_changed.connect(update)

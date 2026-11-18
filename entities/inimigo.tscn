@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c00t1sldrhnv8"]
 
+[ext_resource type="Script" uid="uid://c7iy4xx8q74sv" path="res://scripts/inimigo.gd" id="1_dc5j5"]
 [ext_resource type="Texture2D" uid="uid://dx3qv5b0mbc7y" path="res://sprites/Enimes/bk_cars1.a.png" id="1_yagdu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgh3t"]
 size = Vector2(51, 135)
 
 [node name="inimigo" type="CharacterBody2D" unique_id=1727237677]
+script = ExtResource("1_dc5j5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=220105694]
 texture = ExtResource("1_yagdu")

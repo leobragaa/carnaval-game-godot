@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bi4k00u554byd"]
+
+[ext_resource type="Script" uid="uid://dh61qsf41nw0n" path="res://scripts/tempo_zona.gd" id="1_c01qt"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1113504016]
+
+[node name="Node" type="Node" parent="." unique_id=1447419286]
+script = ExtResource("1_c01qt")
+
+[node name="Label" type="Label" parent="Node" unique_id=279250311]
+offset_right = 148.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 35
+
+[node name="Timer" type="Timer" parent="Node" unique_id=553303498]

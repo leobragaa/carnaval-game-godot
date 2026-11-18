@@ -14,6 +14,7 @@ signal caracter_died
 
 @export var max_health = 100
 @export var _tempo_invulnerabilidade: float = 1.0
+
 var _is_dead: bool = false
 var _tempo_invunerabilidade: float = 0.0
 
@@ -85,6 +86,3 @@ func morte() -> void:
 
 func healthChanged():
 	health_changed.emit(health, max_health)
-	
-func _on_animation_player_on_animation_finished(_anim_name: StringName) -> void:
-	pass
