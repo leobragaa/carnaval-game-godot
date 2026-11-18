@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bud5t8gpthpba" path="res://scenes/tarreno.tscn" id="1_6jnn5"]
 [ext_resource type="PackedScene" uid="uid://citcqe477jrqu" path="res://entities/player.tscn" id="2_13nf1"]
 [ext_resource type="PackedScene" uid="uid://m477d8plor6e" path="res://entities/camera_2d.tscn" id="3_13nf1"]
+[ext_resource type="PackedScene" uid="uid://b8sv3swd3jlhw" path="res://entites/health_bar.tscn" id="4_ia6rr"]
 
 [node name="GameProcess" type="Node2D" unique_id=1847351954]
 
@@ -12,3 +13,5 @@
 
 [node name="Camera2D" parent="." unique_id=900677962 instance=ExtResource("3_13nf1")]
 limit_bottom = 10000000
+
+[node name="HealthBar" parent="." unique_id=427102975 instance=ExtResource("4_ia6rr")]
