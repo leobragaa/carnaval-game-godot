@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://cj516cp1qe8wm"]
 
 [ext_resource type="PackedScene" uid="uid://bud5t8gpthpba" path="res://scenes/tarreno.tscn" id="1_6jnn5"]
+[ext_resource type="Script" uid="uid://cf5tcnvdixs80" path="res://scripts/game_process.gd" id="1_mhf73"]
 [ext_resource type="PackedScene" uid="uid://citcqe477jrqu" path="res://entities/player.tscn" id="2_13nf1"]
 [ext_resource type="PackedScene" uid="uid://m477d8plor6e" path="res://entities/camera_2d.tscn" id="3_13nf1"]
 [ext_resource type="PackedScene" uid="uid://b8sv3swd3jlhw" path="res://entities/health_bar.tscn" id="4_ia6rr"]
 [ext_resource type="PackedScene" uid="uid://bmgwt5b70bsv2" path="res://entities/area_2d.tscn" id="5_wt5pr"]
 [ext_resource type="PackedScene" uid="uid://bi4k00u554byd" path="res://entities/tempo_zona.tscn" id="6_wt5pr"]
 [ext_resource type="PackedScene" uid="uid://byim3ejqya6mv" path="res://entities/node_2d.tscn" id="7_dkog2"]
+[ext_resource type="PackedScene" uid="uid://c00t1sldrhnv8" path="res://entities/inimigo.tscn" id="8_xwdmb"]
+[ext_resource type="PackedScene" uid="uid://ctbvcrdfelfw3" path="res://entities/invocador.tscn" id="9_inu7s"]
+[ext_resource type="PackedScene" uid="uid://dvx2l2i3xe2vv" path="res://entities/canvas_layer.tscn" id="11_0qvmp"]
 
-[node name="GameProcess" type="Node2D" unique_id=1847351954 groups=["Player"]]
+[node name="GameProcess" type="Node2D" unique_id=1847351954 groups=["Player", "inimigos"]]
+script = ExtResource("1_mhf73")
 
 [node name="Tarreno" parent="." unique_id=86263665 instance=ExtResource("1_6jnn5")]
 
@@ -21,6 +26,12 @@ limit_bottom = 10000000
 
 [node name="Area2D" parent="." unique_id=1299931411 instance=ExtResource("5_wt5pr")]
 
+[node name="inimigo" parent="." unique_id=1727237677 instance=ExtResource("8_xwdmb")]
+
+[node name="Invocador" parent="." unique_id=247537901 instance=ExtResource("9_inu7s")]
+
 [node name="CanvasLayer" parent="." unique_id=1113504016 groups=["Player"] instance=ExtResource("6_wt5pr")]
 
 [node name="Node2D" parent="." unique_id=1846152089 instance=ExtResource("7_dkog2")]
+
+[node name="CanvasLayer2" parent="." unique_id=1012614410 instance=ExtResource("11_0qvmp")]

@@ -28,7 +28,9 @@ func _ready() -> void:
 	health = max_health
 	health_changed.emit(health, max_health)
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	if _tempo_invunerabilidade > 0:
+		_tempo_invunerabilidade -= delta
 	_move()
 	_animate()
 
@@ -65,17 +67,25 @@ func _animate() -> void:
 			_animation.play("run_up")
 			_idle_direction = "idle_up"
 
+
 func take_damage(amount: int) -> void:
 	if _is_dead:
 		return
+
 	if _tempo_invunerabilidade > 0:
 		return
-	
+
 	health -= amount
 	health = clampi(health, 0, max_health)
-	
-	_tempo_invunerabilidade = _tempo_invunerabilidade 
+
+	_tempo_invunerabilidade = _tempo_invulnerabilidade
+
 	healthChanged()
+
+	print("Vida atual: ", health)
+
+	if health <= 0:
+		morte()
 
 func morte() -> void:
 	if _is_dead:
