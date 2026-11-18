@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://byim3ejqya6mv"]
+
+[ext_resource type="Script" uid="uid://c7qu5etfr6gt6" path="res://scripts/zonas_ponto.gd" id="1_ecvu0"]
+[ext_resource type="Texture2D" uid="uid://dgn0yq6sj6psp" path="res://icon.svg" id="1_r8dy1"]
+
+[node name="Node2D" type="Node2D" unique_id=1846152089]
+script = ExtResource("1_ecvu0")
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=1950436836]
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D3" unique_id=1017521546]
+position = Vector2(4, 6)
+texture = ExtResource("1_r8dy1")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=632234450]
+position = Vector2(382, -184)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=683829467]
+position = Vector2(2, -10)
+texture = ExtResource("1_r8dy1")
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1396105714]
+position = Vector2(-407, 197)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D2" unique_id=260779729]
+position = Vector2(-14, 0)
+texture = ExtResource("1_r8dy1")
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=92117465]
+position = Vector2(411, 241)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D4" unique_id=1502493266]
+position = Vector2(-5, -27)
+texture = ExtResource("1_r8dy1")
+
+[node name="Marker2D5" type="Marker2D" parent="." unique_id=1997378176]
+position = Vector2(-438, -194)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D5" unique_id=437538178]
+position = Vector2(-11, -20)
+texture = ExtResource("1_r8dy1")

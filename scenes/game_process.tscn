@@ -3,8 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bud5t8gpthpba" path="res://scenes/tarreno.tscn" id="1_6jnn5"]
 [ext_resource type="PackedScene" uid="uid://citcqe477jrqu" path="res://entities/player.tscn" id="2_13nf1"]
 [ext_resource type="PackedScene" uid="uid://m477d8plor6e" path="res://entities/camera_2d.tscn" id="3_13nf1"]
+[ext_resource type="PackedScene" uid="uid://b8sv3swd3jlhw" path="res://entities/health_bar.tscn" id="4_ia6rr"]
+[ext_resource type="PackedScene" uid="uid://bmgwt5b70bsv2" path="res://entities/area_2d.tscn" id="5_wt5pr"]
+[ext_resource type="PackedScene" uid="uid://bi4k00u554byd" path="res://entities/tempo_zona.tscn" id="6_wt5pr"]
+[ext_resource type="PackedScene" uid="uid://byim3ejqya6mv" path="res://entities/node_2d.tscn" id="7_dkog2"]
 
-[node name="GameProcess" type="Node2D" unique_id=1847351954]
+[node name="GameProcess" type="Node2D" unique_id=1847351954 groups=["Player"]]
 
 [node name="Tarreno" parent="." unique_id=86263665 instance=ExtResource("1_6jnn5")]
 
@@ -12,3 +16,11 @@
 
 [node name="Camera2D" parent="." unique_id=900677962 instance=ExtResource("3_13nf1")]
 limit_bottom = 10000000
+
+[node name="HealthBar" parent="." unique_id=427102975 instance=ExtResource("4_ia6rr")]
+
+[node name="Area2D" parent="." unique_id=1299931411 instance=ExtResource("5_wt5pr")]
+
+[node name="CanvasLayer" parent="." unique_id=1113504016 groups=["Player"] instance=ExtResource("6_wt5pr")]
+
+[node name="Node2D" parent="." unique_id=1846152089 instance=ExtResource("7_dkog2")]

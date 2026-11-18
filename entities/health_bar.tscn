@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b8sv3swd3jlhw"]
+
+[ext_resource type="Texture2D" uid="uid://d7cpiolpg7pu" path="res://sprites/HealthBar/healthbarUnder.png" id="2_vkxal"]
+[ext_resource type="Texture2D" uid="uid://b4ch176pob06i" path="res://sprites/HealthBar/healthbarProgress.png" id="3_dnuub"]
+[ext_resource type="Script" uid="uid://7o2xri6o62rf" path="res://scripts/texture_progress_bar.gd" id="3_vkxal"]
+
+[node name="HealthBar" type="CanvasLayer" unique_id=427102975 groups=["Player"]]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1046888083 groups=["BaseCharacter", "Player"]]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -322.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 56.0
+grow_horizontal = 0
+size_flags_vertical = 3
+nine_patch_stretch = true
+texture_under = ExtResource("2_vkxal")
+texture_progress = ExtResource("3_dnuub")
+script = ExtResource("3_vkxal")

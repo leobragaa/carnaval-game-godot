@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://bmgwt5b70bsv2"]
+
+[ext_resource type="Script" uid="uid://bg5rgmqkok87a" path="res://scripts/line_2d.gd" id="1_l68el"]
+
+[sub_resource type="GDScript" id="GDScript_hho03"]
+script/source = "
+extends Area2D
+
+signal vitoria
+
+var jogador_dentro := false
+var tempo_seguro := 0.0
+var venceu := false
+var ultima_posicao := -1
+
+@export var tempo_necessario := 60.0
+
+@onready var timer_mudanca: Timer = $Timer
+@onready var pontos_zona: Node2D = $\"../Node2D\"
+
+
+func _ready() -> void:
+	body_entered.connect(_entrou)
+	body_exited.connect(_saiu)
+
+	timer_mudanca.wait_time = 10.0
+	timer_mudanca.timeout.connect(_mudar_local)
+
+	_mudar_local()
+	timer_mudanca.start()
+
+
+func _process(delta: float) -> void:
+	if jogador_dentro and not venceu:
+		tempo_seguro += delta
+
+	if tempo_seguro >= tempo_necessario and not venceu:
+		venceu = true
+		print(\"VITORIA !!!\")
+		vitoria.emit()
+
+
+func _entrou(body: Node2D) -> void:
+	if body.is_in_group(\"player\"):
+		jogador_dentro = true
+
+
+func _saiu(body: Node2D) -> void:
+	if body.is_in_group(\"player\"):
+		jogador_dentro = false
+
+func esconder_desenhos() -> void:
+	for ponto in pontos_zona.get_children():
+		var desenho = ponto.get_node(\"Sprite2D\")
+		desenho.visible = false
+		
+func _mudar_local() -> void:
+	var locais = pontos_zona.get_children()
+
+	if locais.is_empty():
+		return
+
+	var indice = randi_range(0, locais.size() - 1)
+	var ponto_escolhido = locais[indice]
+	
+	while locais.size() > 1 and indice == ultima_posicao:
+		indice = randi_range(0, locais.size() - 1)
+	
+	for ponto in locais:
+		ponto.get_node(\"Sprite2D\").visible = false
+		
+	jogador_dentro = false
+	esconder_desenhos()
+	global_position = ponto_escolhido.global_position
+	print(\"Zona mudou para: \", ponto_escolhido.name)
+	print(\"Nova posição: \", global_position)
+	ultima_posicao = indice
+	
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ijcx3"]
+radius = 81.055534
+
+[node name="Area2D" type="Area2D" unique_id=1299931411]
+script = SubResource("GDScript_hho03")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2002492496]
+show_behind_parent = true
+texture_filter = 1
+shape = SubResource("CircleShape2D_ijcx3")
+
+[node name="Timer" type="Timer" parent="." unique_id=95771506]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=101481647]
+script = ExtResource("1_l68el")
